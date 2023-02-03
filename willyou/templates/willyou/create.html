@@ -1,0 +1,12 @@
+<html>
+    <h1>생성 Test</h1>
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+        {{ coupleForm.as_p }}
+
+        {{ weddingImagesFormSet.management_form }}
+        {% for form in weddingImagesFormSet %}
+            {{ form }}<br />
+        {% endfor %}
+        <button type="submit">save</button>
+    </form>
+</html>

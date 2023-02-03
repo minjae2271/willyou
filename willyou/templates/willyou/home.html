@@ -1,3 +1,10 @@
 <html>
-    <h1>hi</h1>
+    <h1>고객 리스트 TEST</h1>
+    {% for couple in couples %}
+        <div>{{ couple.groom }} / {{ couple.bride }} : {{ couple.groom_bank}}/{{ couple.groom_account}}</div>
+    {% endfor %}
+
+    {% for weddingImage in weddingImages %}
+        <img src="{{weddingImage.image.url}}" /><br />
+    {% endfor %}
 </html>

@@ -29,9 +29,9 @@ class Couple(models.Model):
 
 
 def image_upload_path(instance, filename):
-    return f'{instance.couple.groom}-{instance.couple.bride}_{filename}'
+    return f'willyou/{instance.id}_{filename}'
 
-class WeddingImages(models.Model):
+class WeddingImage(models.Model):
     id = models.AutoField(primary_key=True)
     couple = models.ForeignKey(Couple, on_delete=models.CASCADE, related_name='image')
     image = models.ImageField(upload_to=image_upload_path)

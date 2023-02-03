@@ -8,5 +8,5 @@ class CoupleForm(forms.ModelForm):
 
 class WeddingImagesForm(forms.ModelForm):
     class Meta:
-        model = WeddingImages
+        model = WeddingImage
         fields = ('image',)
